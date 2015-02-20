@@ -1,0 +1,331 @@
+/* Document */
+
+body {
+	font-size: 16px;
+	line-height: 18px;
+	color: #000;
+	background-color: #FFF;
+	}
+
+a:link {	
+	color: #F00; 
+	text-decoration: none; 
+	}
+
+a:visited {
+	color: #F00; 
+	}
+
+a:hover {
+	color: #000;
+	}
+	
+a:active { 
+	color: #FFF; 
+	}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* @ */
+
+@font-face{ 
+	font-family: 'Dactylographe';
+	src: url('../_Fonts/Dactylographe.eot');
+	src: url('../_Fonts/Dactylographe.eot?#iefix') format('embedded-opentype'),
+	     url('../_Fonts/Dactylographe.woff') format('woff'),
+	     url('../_Fonts/Dactylographe.ttf') format('truetype'),
+	     url('../_Fonts/Dactylographe.svg#webfont') format('svg');
+}
+
+
+
+/* Fonts */
+
+.helvetica {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	}
+
+.courier {
+        font-family: "Courier New", Courier, monospace;
+        }
+
+.dactylographe {
+        font-family: "Dactylographe", Courier, "Courier New", monospace;
+        }
+
+.caption {
+        font-size: 12px;
+        line-height: 14px;
+        }
+
+
+
+/* id */
+
+#radio {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 480px;
+	height: 360px;
+ 	margin-top: -180px;
+	margin-left: -240px;
+	}
+
+#name {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 320px;
+	height: 240px;
+	}
+
+#iframe {
+	/* overflow:auto; */
+	}
+
+#gradient {   
+	background: -webkit-linear-gradient(76deg, red, blue); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(76deg, red, blue); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(76deg, red, blue); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(130deg, #F00, #FFF); /* Standard syntax (must be last) */
+	}
+
+#display {
+	}
+
+#logo {
+	mix-blend-mode: multiply;    
+	-webkit-filter: drop-shadow(0px 0px 20px #F66);
+	filter: drop-shadow(0px 0px 20px #F66);
+	}
+
+#logo:hover {
+	mix-blend-mode: multiply;    
+	-webkit-filter: drop-shadow(0px 0px 20px #F00);
+	filter: drop-shadow(0px 0px 20px #F00); 
+	}
+
+
+/* Containers */
+
+.iframeContainer {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:0;
+	}
+
+.iframeImageContainer {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:0;
+	}
+
+.displayContainer {
+	position: fixed;
+        /* workaround for fixed div rendering in safari */
+        -webkit-font-smoothing: subpixel-antialiased;
+	top: 0px;
+	left: 0px;
+	width: 250px;
+	padding:20px 30px 20px 50px;
+	z-index:99;
+	background-color:#FFF;
+	box-shadow: 2px 2px 20px #FCC;
+	}
+
+.englishMainContainer {
+	/* wraps menu, left, right */
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	width: 98%;
+	}	
+
+.englishMenuContainer {
+	position: relative;
+	left: 20px;
+	z-index: 99;
+	}
+
+.leftContainer {
+	position: absolute;
+	left: 20px;
+	width: 46%;
+	padding-bottom:40px;
+	}	
+
+.rightContainer {
+	position: absolute;
+	right: 20px;
+	width: 46%;
+	}	
+
+.middleContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+ 	/* margin-top: -240px; */
+	/* margin-left: -426px; */
+	width: 900px;
+	height: 300px;
+	}	
+
+.topleftContainer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 50%;
+	height: 50%;
+	}	
+
+.toprightContainer {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	width: 50%;
+	height: 50%;
+	}	
+
+.bottomleftContainer {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 50%;
+	height: 50%;
+	}	
+
+.bottomrightContainer {
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	width: 50%;
+	height: 50%;
+	}	
+		
+.bottomleftcornerContainer {
+	position: fixed;
+	left: 20px;
+	bottom: 48px;
+	}	
+
+.bottomrightcornerContainer {
+	position: fixed;
+	right: 20px;
+	bottom: 10px;
+	}	
+
+.planetariumContainer {
+	position: fixed;
+	right: 176px;
+	bottom: 126px;
+	z-index: 99;
+	/*width: 200px;*/
+	}	
+
+.innerContainerCenteredEnglish {
+	position: absolute;
+	left:35%;
+	top:50%;
+	width:50%;
+	}
+
+.innerContainerCenteredArabic {
+	position: absolute;
+	right:35%;
+	top:50%;
+	width:50%;
+	}
+
+.timeContainer {
+	position: fixed;
+	text-align: left;
+	height: 36px;
+	width: 300px;
+	/* background-color: #FFA; */
+	}
+
+.captionContainer {
+	padding-top: 10px;
+	}
+	
+	
+/* Navigation */
+
+.active {
+	margin-left: -40px;
+	}
+
+.active a {
+	/*color:#000;*/
+	}
+
+.active a:hover {
+	/*color:#00F;*/
+	}
+
+.active a:active {
+	/*color:#FFF;*/
+	}
+
+.static {
+	margin-left: -40px;
+	}
+	
+.static a {
+	/*color:#FC0;*/
+	}
+
+.static a:hover {
+	color:#000;
+	}
+
+.static a:active {
+	color:#FFF;
+	}
+
+
+/* Utility */
+
+.red{
+	color:#F00;
+	}
+
+.red a {
+	color:#00F;
+	}
+
+.green{
+	color:#609;
+	}
+
+.green a {
+	color:#609;
+	}
+
+.blue{
+	color:#0CF;
+	}
+
+.blue a {
+	color:#0CF;
+	}
+
+.hide 	{
+	visibility: hidden;
+	}
+
+.show 	{
+	visibility: visible;
+	}

@@ -1,0 +1,4 @@
+AuthUserFile /usr/home/templecontemp/public_html/templecontemporary.info/.htpasswd
+AuthName "OPEN-RECORDS-GENERATOR"
+AuthType Basic
+Require valid-user

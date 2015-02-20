@@ -1,0 +1,4 @@
+AuthUserFile /Library/Webserver/Documents/KUWAIT/.htpasswd
+AuthName "OPEN-RECORDS-GENERATOR"
+AuthType Basic
+Require valid-user
