@@ -60,7 +60,7 @@
 
 <body>
 
-<div id="name" class="dactylographe">
+<div id="name" class="helvetica">
 RADIO ATHÈNES<br />
 Petraki 15<br />  
 Athens 10563<br />  
