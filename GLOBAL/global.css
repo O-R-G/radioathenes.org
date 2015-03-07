@@ -8,16 +8,17 @@ body {
 	}
 
 a:link {	
-	color: #999; 
+	color: #000;
+	text-shadow: 0px 0px 2px rgb(0, 0, 0);
 	text-decoration: none; 
 	}
 
 a:visited {
-	color: #999; 
+	color: #000;
 	}
 
 a:hover {
-	color: #000;
+	color: transparent;
 	}
 	
 a:active { 
@@ -92,6 +93,12 @@ iframe {
 
 #name {
 	width: 320px;
+	}
+
+#address {
+	position:fixed;
+	bottom:0px;
+	width: 320px;	
 	}
 
 #text {

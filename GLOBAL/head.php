@@ -61,11 +61,39 @@
 <body>
 
 <div id="name" class="mtdbt2f-PP">
-RADIO ATHÈNES<br />
-Petraki 15<br />  
-Athens 10563<br />  
-+30 6946 687907<br />  
-<br />
+	<a href="index.php">RADIO ATHÈNES</a>
+</div>
+
+<?php
+
+	// use LEFT JOIN query
+
+	$sql = "SELECT objects.id AS objectsId, objects.name1, objects.deck, objects.body, objects.end, objects.active, objects.rank as objectsRank, 
+wires.fromid, wires.toid FROM objects, wires WHERE wires.fromid = '1' AND wires.toid = objects.id AND objects.active = '1' AND 
+wires.active = '1' ORDER BY objects.rank;";
+                        
+	$result =  MYSQL_QUERY($sql);
+	$html = "";
+	$i = 0;
+
+	$html .= "<ul class = 'mtdbt2f-PP'>";
+
+	while ( $myrow = MYSQL_FETCH_ARRAY($result) ) {
+
+		$html .= "<li class='active'>";
+		$html .= "<a href='detail.php?id=" . $myrow['objectsId'] . "'>" . $myrow['end'] . " / " . $myrow["name1"] . "</a>";
+		$html .= "</li>";	
+	}
+
+	$html .= "</ul>";
+	echo $html;
+?>
+
+<div id="address" class="mtdbt2f-PP">
+	Petraki 15<br />  
+	Athens 10563<br />  
+	+30 6946 687907<br />  
+	<br />
 </div>
 
 
