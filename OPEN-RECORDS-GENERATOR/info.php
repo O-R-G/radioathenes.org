@@ -5,7 +5,7 @@ require_once("GLOBAL/head.php");
 ?>
 
 <div class="monoHvy">Open Records Generator</div>
-Version 2.8, July 2013
+Version 2.9.5, August 7, 2014
 <br />
 <br />
 <a href="http://www.o-r-g.com/" target="_blank">O R G inc.</a><br />

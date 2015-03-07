@@ -9,7 +9,9 @@ $action = $_REQUEST['action'];
 $name1 = $_REQUEST['name1'];
 $deck = $_REQUEST['deck'];
 $body = $_REQUEST['body'];
+$notes = $_REQUEST['notes'];
 $url = $_REQUEST['url'];
+$begin = $_REQUEST['begin'];
 $end = $_REQUEST['end'];
 $rank = $_REQUEST['rank'];
 $uploadsMax = $_REQUEST['uploadsMax'];
@@ -100,13 +102,6 @@ $objects = explode(",", $object);
 
 $object = $objects[sizeof($objects) - 1];
 if (!$object) $object = 0;
-
-// KUWAIT-specific hack
-// check for language branches
-
-if (in_array("15", $objects)) {
-    $languageDirectionRight=TRUE;
-}
 
 // Check that selected object exists
 

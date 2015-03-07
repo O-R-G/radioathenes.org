@@ -1,19 +1,19 @@
 /* Document */
 
 body {
-	font-size: 16px;
-	line-height: 18px;
+	font-size: 17px;
+	line-height: 20px;
 	color: #000;
 	background-color: #FFF;
 	}
 
 a:link {	
-	color: #F00; 
+	color: #999; 
 	text-decoration: none; 
 	}
 
 a:visited {
-	color: #F00; 
+	color: #999; 
 	}
 
 a:hover {
@@ -42,6 +42,15 @@ iframe {
 	     url('../_Fonts/Dactylographe.svg#webfont') format('svg');
 }
 
+@font-face{ 
+	font-family: 'mtdbt2f-PP';
+	src: url('../_Fonts/mtdbt2f-PP.eot');
+	src: url('../_Fonts/mtdbt2f-PP.eot?#iefix') format('embedded-opentype'),
+	     url('../_Fonts/mtdbt2f-PP.woff') format('woff'),
+	     url('../_Fonts/mtdbt2f-PP.ttf') format('truetype'),
+	     url('../_Fonts/mtdbt2f-PP.svg#webfont') format('svg');
+}
+
 
 
 /* Fonts */
@@ -56,6 +65,10 @@ iframe {
 
 .dactylographe {
         font-family: "Dactylographe", Courier, "Courier New", monospace;
+        }
+
+.mtdbt2f-PP {
+        font-family: "mtdbt2f-PP", Courier, "Courier New", monospace;
         }
 
 .caption {
@@ -78,15 +91,11 @@ iframe {
 	}
 
 #name {
-	position: absolute;
-	top: 10px;
-	left: 10px;
 	width: 320px;
-	height: 240px;
 	}
 
-#iframe {
-	/* overflow:auto; */
+#text {
+	width: 320px;
 	}
 
 #gradient {   
