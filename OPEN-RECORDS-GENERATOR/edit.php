@@ -75,6 +75,7 @@ if ($action != "update") {
 			$mediaNum = "". STR_PAD($myrow["id"], 5, "0", STR_PAD_LEFT);
 			$mediaFile = $dbMedia . $mediaNum .".". $myrow["type"];	
 			$mediaFileDisplay = ($myrow["type"] == "pdf") ? "MEDIA/pdf.gif" : $mediaFile;
+			$mediaFileDisplay = ($myrow["type"] == "mp4") ? "MEDIA/quicktime.gif" : $mediaFile;
 			echo "\n\n<tr><td>Image ". STR_PAD($i, 2, "0", STR_PAD_LEFT) ."&nbsp; </td>";
 			echo "\n<td><a href='$mediaFile' target='_blank'><img src='". $mediaFileDisplay ."' width='160' border='0'></a>";
 			echo "\n<input type='hidden' name='mediaId[". $j ."]' value='". $myrow["id"] ."' />";

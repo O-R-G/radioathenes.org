@@ -2,45 +2,11 @@
 require_once("GLOBAL/head.php"); 
 ?>
 
-
-        <!-- MENU -->
-
-<!--
-        <div id='menu' class='<?php echo ($language == "en") ? "englishMenuContainer blue " : "arabicMenuContainer red " ?> tahoma'>
-
-                <p dir="rtl" lang="AR" class="tahoma green">
-
-                <ul>
-                        <?php
-                                if ( $language == "en" ) $path = "14";
-                                if ( $language == "ar" ) $path = "15";
-                                $limit = 1;
-                                $selection = $idFull;
-                                // $linkPageName = $pageName;
-                                $linkPageName = "detail";                       // probably want to fix this and set using O-R$
-                                $breadcrumbsMode = FALSE;
-                                $multiColumn = 0;
-                                $stub = FALSE;
-                                $breadcrumbsMode = FALSE;
-                                $thisLanguage = $language;
-                                if (!$breadcrumbsMode) ($id) ? $breadcrumbsMode = TRUE : $breadcrumbsMode = FALSE;
-
-                                // displayNavigation($path, $limit, $selection, $linkPageName, $stub, $breadcrumbsMode, $multiColumn, $thisLanguage);
-                        ?>
-                </ul>
-        </p>
-        </div>
-
--->
-
-
-
-
         <!-- VIDEO -->
 
-        <div id="radio">
+        <div>
 
-                <video width="480" height="360" autoplay loop>
+                <video id="radio" width="480" height="360" autoplay loop>
                         <source src="MEDIA/MP4/out.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                 </video>
@@ -79,6 +45,7 @@ objects.rank as objectsRank FROM objects WHERE objects.id = $id AND objects.acti
 
 				// totally hacked for dev
 
+				$html .= "<br />";
 				$html .= "<div id='text' class='mtdbt2f-PP'>";
 				$html .= $myrow["body"];
 				$html .= "</div>";

@@ -1,26 +1,10 @@
 
         <script type="text/javascript">
+		document.onload = radioInit();
 
-		<?php
-		if ($id == 2) {
-		?>
-
-                	// var animate = !(checkCookie("animateCookie"));
-			// setCookie("animateCookie");
-
-		<?php
-		} else {
-		?>
-
-        	        // var animate = true;
-
-		<?php
+                if (debug) {
+			console.log("init " + getCookie("audioCookie") + "\r"); 
 		}
-		?>
-		
-		// delay = 40;
-		// document.onload = initMessage("source","display",animate,delay); 
-
 	</script>
 	
 	</body>
