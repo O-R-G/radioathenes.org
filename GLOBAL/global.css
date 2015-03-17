@@ -1,6 +1,8 @@
 /* Document */
 
 body {
+        /* workaround for fixed div rendering in safari */
+        -webkit-font-smoothing: subpixel-antialiased;
 	font-size: 17px;
 	line-height: 20px;
 	color: #000;
@@ -10,7 +12,8 @@ body {
 a:link {	
 	color: #000;
 	/* text-shadow: 0px 0px 2px rgb(0, 0, 0); */
-	text-decoration: none; 
+	text-decoration: underline;
+	border-bottom: 1px #000; 
 	}
 
 a:visited {
@@ -39,21 +42,21 @@ ul {
 /* @ */
 
 @font-face{ 
-	font-family: 'Dactylographe';
-	src: url('../_Fonts/Dactylographe.eot');
-	src: url('../_Fonts/Dactylographe.eot?#iefix') format('embedded-opentype'),
-	     url('../_Fonts/Dactylographe.woff') format('woff'),
-	     url('../_Fonts/Dactylographe.ttf') format('truetype'),
-	     url('../_Fonts/Dactylographe.svg#webfont') format('svg');
-}
-
-@font-face{ 
 	font-family: 'mtdbt2f-PP';
 	src: url('../_Fonts/mtdbt2f-PP.eot');
 	src: url('../_Fonts/mtdbt2f-PP.eot?#iefix') format('embedded-opentype'),
 	     url('../_Fonts/mtdbt2f-PP.woff') format('woff'),
 	     url('../_Fonts/mtdbt2f-PP.ttf') format('truetype'),
 	     url('../_Fonts/mtdbt2f-PP.svg#webfont') format('svg');
+}
+
+@font-face{ 
+	font-family: 'mtdbt2f4d-915';
+	src: url('../_Fonts/mtdbt2f4d-915.eot');
+	src: url('../_Fonts/mtdbt2f4d-915.eot?#iefix') format('embedded-opentype'),
+	     url('../_Fonts/mtdbt2f4d-915.woff') format('woff'),
+	     url('../_Fonts/mtdbt2f4d-915.ttf') format('truetype'),
+	     url('../_Fonts/mtdbt2f4d-915.svg#webfont') format('svg');
 }
 
 
@@ -76,6 +79,10 @@ ul {
         font-family: "mtdbt2f-PP", Courier, "Courier New", monospace;
         }
 
+.mtdbt2f4d-915 {
+        font-family: "mtdbt2f4d-915", Courier, "Courier New", monospace;
+        }
+
 .caption {
         font-size: 12px;
         line-height: 14px;
@@ -86,7 +93,8 @@ ul {
 /* id */
 
 #radio {
-	position: absolute;
+	position: fixed;
+	z-index: 0;
 	top: 50%;
 	left: 50%;
 	width: 480px;
@@ -125,15 +133,17 @@ ul {
 
 /* Containers */
 
-#menuContainer {
+.menuContainer {
 	position: absolute;
 	top: 40px;
 	left: 30px;
 	}
 
-.bodyContainer {
-	position: absolute;
-	left: 0px;
+.detailContainer {
+	margin-top: 18px;
+	margin-bottom: 18px;
+	margin-left: 20px;
+	width: 400px;
 	}
 
 .displayContainer {
@@ -147,117 +157,6 @@ ul {
 	z-index:99;
 	background-color:#FFF;
 	box-shadow: 2px 2px 20px #FCC;
-	}
-
-.englishMainContainer {
-	/* wraps menu, left, right */
-	position: absolute;
-	top: 40px;
-	left: 0px;
-	width: 98%;
-	}	
-
-.englishMenuContainer {
-	position: relative;
-	left: 20px;
-	z-index: 99;
-	}
-
-.leftContainer {
-	position: absolute;
-	left: 20px;
-	width: 46%;
-	padding-bottom:40px;
-	}	
-
-.rightContainer {
-	position: absolute;
-	right: 20px;
-	width: 46%;
-	}	
-
-.middleContainer {
-	position: absolute;
-	top: 50%;
-	left: 50%;
- 	/* margin-top: -240px; */
-	/* margin-left: -426px; */
-	width: 900px;
-	height: 300px;
-	}	
-
-.topleftContainer {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 50%;
-	height: 50%;
-	}	
-
-.toprightContainer {
-	position: absolute;
-	top: 0px;
-	left: 50%;
-	width: 50%;
-	height: 50%;
-	}	
-
-.bottomleftContainer {
-	position: absolute;
-	top: 50%;
-	left: 0px;
-	width: 50%;
-	height: 50%;
-	}	
-
-.bottomrightContainer {
-	position: absolute;
-	top: 50%;
-	right: 0px;
-	width: 50%;
-	height: 50%;
-	}	
-		
-.bottomleftcornerContainer {
-	position: fixed;
-	left: 20px;
-	bottom: 48px;
-	}	
-
-.bottomrightcornerContainer {
-	position: fixed;
-	right: 20px;
-	bottom: 10px;
-	}	
-
-.planetariumContainer {
-	position: fixed;
-	right: 176px;
-	bottom: 126px;
-	z-index: 99;
-	/*width: 200px;*/
-	}	
-
-.innerContainerCenteredEnglish {
-	position: absolute;
-	left:35%;
-	top:50%;
-	width:50%;
-	}
-
-.innerContainerCenteredArabic {
-	position: absolute;
-	right:35%;
-	top:50%;
-	width:50%;
-	}
-
-.timeContainer {
-	position: fixed;
-	text-align: left;
-	height: 36px;
-	width: 300px;
-	/* background-color: #FFA; */
 	}
 
 .captionContainer {
@@ -313,5 +212,21 @@ ul {
 	}
 
 .show 	{
-	visibility: visible;
+	visibility: visible; 
+	}
+
+.collapsible {
+	display: none;
+	}
+
+.active a::before {
+	content: "";
+	}
+
+.plain {
+	text-decoration: none;
+	}
+
+.plain a {
+	text-decoration: none;
 	}

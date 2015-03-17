@@ -71,15 +71,6 @@ if(!document.getElementById) {
 
 
 
-//  Alternative to "voided" links
-
-function Hello() {
-	// Empty function
-}
-
-
-
-
 //  Show and Hide objects
 
 function objectShow(id) {
@@ -87,6 +78,23 @@ function objectShow(id) {
 }
 function objectHide(id) {
 	document.getElementById(id).style.visibility = "hidden";
+}
+
+
+
+//  Expand / collapse objects
+
+function expandCollapse(id) {
+
+	if ( document.getElementById(id).style.display == "block" ) {
+	
+		document.getElementById(id).style.display = "none";
+	} else {
+	
+		document.getElementById(id).style.display = "block";
+	}
+
+	return true;
 }
 
 

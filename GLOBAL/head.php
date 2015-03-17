@@ -52,19 +52,22 @@
 	<meta http-equiv="Title" content="<?php echo $documentTitle; ?>" />		
 	<meta name="viewport" content="width=400">
 	<link rel="stylesheet" type="text/css" media="all" href="GLOBAL/global.css" />
-	<script type="text/javascript" src="GLOBAL/global.js"></script>
+	<script type="text/javascript" src="JS/global.js"></script>
 	<script type="text/javascript" src="JS/radioControl.js"></script>
 </head>
 
 <body>
 
-<div id="name" class="mtdbt2f-PP">
-	<a href="index.php">RADIO ATHÈNES</a>
-</div>
+	<!-- NAME -->
+
+	<div id="name" class="mtdbt2f4d-915 plain">
+		<a href="<?php echo ($pageName == 'about') ? 'index' : 'about' ?>.php">RADIO ATHÈNES</a>
+	</div>
 
 
-        <!-- VIDEO -->
-        
+
+	<!-- VIDEO -->
+        	
 	<div>
 		<video id="radio" width="480" height="360" autoplay loop>
 			<source src="MEDIA/MP4/radio.mp4" type="video/mp4">
@@ -73,63 +76,12 @@
 	</div>
 
 
-<!-- MENU -->
 
-<?php
+	<!-- CONTROLS -->
 
-	// SQL objects from rootid
-
-	$rootid = 1;
-	
-	$sql = "SELECT objects.id AS objectsId, objects.name1, objects.deck, objects.body, objects.end, objects.begin, 
-objects.active, objects.rank as objectsRank, wires.fromid, wires.toid FROM objects, wires WHERE wires.fromid = $rootid AND wires.toid 
-= objects.id AND objects.active = '1' AND wires.active = '1' ORDER BY objects.rank;";
-	              
-	/* 
-        // SQL object plus media from root with rootname
-
-	$rootid = 1;
-
-        $sql = "SELECT objects.id AS objectsId, objects.name1, objects.deck, objects.body, objects.notes, objects.active, 
-objects.begin, objects.end, objects.rank as objectsRank, (SELECT objects.name1 FROM objects WHERE objects.id = $rootid) AS rootname, 
-media.id AS mediaId, media.object AS mediaObject, media.type, media.caption, media.active AS mediaActive, media.rank FROM objects 
-LEFT JOIN media ON objects.id = media.object AND media.active = 1 WHERE wires.fromid = '1' AND wires.toid = objects.id AND 
-objects.active = '1' AND wires.active = '1' ORDER BY media.rank;";
-	*/
-
-	$result =  MYSQL_QUERY($sql);
-	$html = "";
-	$i = 0;
-
-	$html .= "<div id = 'menuContainer' class = 'mtdbt2f-PP'>";
-
-	while ( $myrow = MYSQL_FETCH_ARRAY($result) ) {
-
-
-		$html .= "<div class='active'>";
-		$html .= "<a onmousedown='objectShow(\"line$i\");' href='#null'>" . "<span class='black'>" . date('Y.d.m H:i', strtotime($myrow['begin'])) . " / </span>" . $myrow["name1"] . "</a>";
-		$html .= "</div>";
-	
-		// $html .= "<br />";	
-		
-		// ** use overflow:hidden css to make appear and disappear, collapsing menu **
-
-		$html .= "<div id='line$i' class='bodyContainer hide'>" . $myrow['body'] . "</div>";	
-
-		$i++;
-	}
-
-	$html .= "</div>";
-	echo nl2br($html);
-?>
-
-
-
-<!-- CONTROLS -->
-
-<div id="controls" class="mtdbt2f-PP">
-	<a href="javascript:radioOnOff();">&times</a>
-</div>
+	<div id="controls" class="mtdbt2f4d-915 plain">
+		<a href="javascript:radioOnOff();">&times</a>
+	</div>
 
 
 
