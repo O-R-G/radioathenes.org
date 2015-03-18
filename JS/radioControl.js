@@ -14,15 +14,15 @@
 	        var controls = document.getElementById("controls");
 		var audio = getCookie("audioCookie");
 
-		if ( audio == "on") {
-
-			radio.play();
-			controls.innerHTML = "<a href=\"javascript:radioOnOff();\">&times;</a>";
-
-		} else {
+		if ( audio == "off") {
 
 			radio.pause();
 			controls.innerHTML = "<a href=\"javascript:radioOnOff();\">+</a>";
+
+		} else {
+
+			radio.play();
+			controls.innerHTML = "<a href=\"javascript:radioOnOff();\">&times;</a>";
 		}	
 
 		if (debug) {

@@ -15,11 +15,10 @@
 	$dbClient = "OPEN-RECORDS-GENERATOR";
 
 	// Client Color
-
 	$dbColor = "000";
 	$dbColor2 = "666";
 	$dbColor3 = "333";
-		
+
 	// Client Username and Password -- read only
 	$dbUser1 = "guest";
 	$dbPass1 = "guest";
@@ -33,11 +32,11 @@
 	$dbPass3 = "admin";
 
 	// Database Start Date/Time
-	$dbStart = mktime(15, 25, 00, 03, 26, 2014);
+	$dbStart = mktime(20, 53, 00, 06, 04, 2014);
 	// (hour, minute, second, month, day, year)
 
 	// Client URL
-	$dbHost = "http://www.templecontemporary.info//";
+	$dbHost = "http://radioathenes.org/";
 
 	// DB Admin
 	$dbAdmin = $dbHost ."OPEN-RECORDS-GENERATOR/";
@@ -58,15 +57,17 @@
 
 function dbConnectMain($dbUser) {
 
-	$dbMainHost = "db152a.pair.com";
-	$dbMainDbse = "templecontemp_main";
+	$dbMainHost = "localhost";
+	$dbMainDbse = "radioa_radioathenes";
 
-	if 		($dbUser == 1) {		$dbMainUser = "1026876"; 	$dbMainPass = "S3rRZ45q"; 
-}
-	else if ($dbUser == 2) {		$dbMainUser = "1026876"; 	$dbMainPass = "S3rRZ45q"; 
-}
-	else if ($dbUser == 3) {		$dbMainUser = "1026876";   	$dbMainPass = "S3rRZ45q"; 
-}
+	if 		($dbUser == 1) {		$dbMainUser = 
+"radioa_m"; 	$dbMainPass = "hZqd9MTeSn4T"; }
+	else if ($dbUser == 2) {		$dbMainUser = 
+"radioa_m"; 	
+$dbMainPass = "hZqd9MTeSn4T"; }
+	else if ($dbUser == 3) {		$dbMainUser = 
+"radioa_m";   	
+$dbMainPass = "hZqd9MTeSn4T"; }
 
 	$dbConnect = MYSQL_CONNECT($dbMainHost, $dbMainUser, $dbMainPass);
 	MYSQL_SELECT_DB($dbMainDbse, $dbConnect);

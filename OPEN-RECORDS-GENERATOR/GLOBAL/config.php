@@ -36,7 +36,7 @@
 	// (hour, minute, second, month, day, year)
 
 	// Client URL
-	$dbHost = "http://localhost/RADIOATHENES/";
+	$dbHost = "http://radioathenes.org/";
 
 	// DB Admin
 	$dbAdmin = $dbHost ."OPEN-RECORDS-GENERATOR/";
@@ -58,11 +58,16 @@
 function dbConnectMain($dbUser) {
 
 	$dbMainHost = "localhost";
-	$dbMainDbse = "local_radioathenes";
+	$dbMainDbse = "radioa_radioathenes";
 
-	if 		($dbUser == 1) {		$dbMainUser = "root"; 	$dbMainPass = ""; }
-	else if ($dbUser == 2) {		$dbMainUser = "root"; 	$dbMainPass = ""; }
-	else if ($dbUser == 3) {		$dbMainUser = "root";   	$dbMainPass = ""; }
+	if 		($dbUser == 1) {		$dbMainUser = 
+"radioa_m"; 	$dbMainPass = "hZqd9MTeSn4T"; }
+	else if ($dbUser == 2) {		$dbMainUser = 
+"radioa_m"; 	
+$dbMainPass = "hZqd9MTeSn4T"; }
+	else if ($dbUser == 3) {		$dbMainUser = 
+"radioa_m";   	
+$dbMainPass = "hZqd9MTeSn4T"; }
 
 	$dbConnect = MYSQL_CONNECT($dbMainHost, $dbMainUser, $dbMainPass);
 	MYSQL_SELECT_DB($dbMainDbse, $dbConnect);

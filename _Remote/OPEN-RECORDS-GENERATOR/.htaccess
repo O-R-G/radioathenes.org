@@ -1,4 +1,4 @@
-AuthUserFile /usr/home/templecontemp/public_html/templecontemporary.info/.htpasswd
+AuthUserFile /home/radioa/public_html/.htpasswd
 AuthName "OPEN-RECORDS-GENERATOR"
 AuthType Basic
 Require valid-user
