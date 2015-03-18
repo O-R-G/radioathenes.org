@@ -1,4 +1,4 @@
-AuthUserFile /Library/Webserver/Documents/TEMPLECONTEMPORARY/.htpasswd
+AuthUserFile /Library/Webserver/Documents/RADIOATHENES/.htpasswd
 AuthName "OPEN-RECORDS-GENERATOR"
 AuthType Basic
 Require valid-user

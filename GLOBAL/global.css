@@ -137,6 +137,7 @@ ul {
 	position: absolute;
 	top: 40px;
 	left: 30px;
+	width: 400px;
 	}
 
 .detailContainer {
@@ -230,3 +231,34 @@ ul {
 .plain a {
 	text-decoration: none;
 	}
+
+
+
+
+
+
+
+/* mobile */
+
+@media screen and (max-width: 768px) {
+
+html {
+        -webkit-tap-highlight-color: rgba(255);
+        }
+
+body {
+        }
+
+.menuContainer {
+        position: absolute;
+        top: 40px;
+        left: 30px;
+        width: 75%;
+        }
+
+.detailContainer {
+        margin-top: 18px;
+        margin-bottom: 18px;
+        margin-left: 20px;
+        width: 75%;
+        }

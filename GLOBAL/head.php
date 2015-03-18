@@ -50,7 +50,7 @@
 	<title><?php echo $documentTitle; ?></title>
 	<meta http-equiv="Content-Type" content="text/xhtml; charset=utf-8" />
 	<meta http-equiv="Title" content="<?php echo $documentTitle; ?>" />		
-	<meta name="viewport" content="width=400">
+ 	<meta name="viewport" content="user-scalable=no, width=device-width">
 	<link rel="stylesheet" type="text/css" media="all" href="GLOBAL/global.css" />
 	<script type="text/javascript" src="JS/global.js"></script>
 	<script type="text/javascript" src="JS/radioControl.js"></script>
@@ -69,7 +69,7 @@
 	<!-- VIDEO -->
         	
 	<div>
-		<video id="radio" width="480" height="360" autoplay loop>
+		<video id="radio" width="480" height="360" poster="MEDIA/loading.gif" autoplay loop>
 			<source src="MEDIA/MP4/radio.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>

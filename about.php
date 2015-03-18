@@ -27,7 +27,7 @@ wires.toid = objects.id AND objects.active = '1' AND wires.active = '1' ORDER BY
         $html = "";
         $i = 0;
 
-        $html .= "<div class = 'detailContainer mtdbt2f4d-915'>";
+        $html .= "<div class = 'menuContainer mtdbt2f4d-915'>";
 	$html .= $body;
 
         while ( $myrow = MYSQL_FETCH_ARRAY($result) ) {
