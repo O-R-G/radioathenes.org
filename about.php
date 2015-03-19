@@ -41,6 +41,7 @@ wires.toid = objects.id AND objects.active = '1' AND wires.active = '1' ORDER BY
                 $i++;
         }
 
+        $html .= "<br/><br/>";
         $html .= "</div>";
         echo nl2br($html);
 ?>
