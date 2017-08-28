@@ -17,7 +17,7 @@ objects.deck, objects.body, objects.end, objects.begin,
 objects.active, objects.rank as objectsRank, wires.fromid, wires.toid 
 FROM objects, wires WHERE wires.fromid = $rootid AND wires.toid = 
 objects.id AND objects.active = '1' AND wires.active = '1' ORDER BY 
-objects.rank;";
+objects.begin DESC;";
 
         /*
         // SQL object plus media from root with rootname
