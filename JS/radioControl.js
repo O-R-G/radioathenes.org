@@ -43,7 +43,7 @@
 	        var radio = document.getElementById("radio");
 	        var controls = document.getElementById("controls");
 		var audio = getCookie("audioCookie");
-
+/*
  		if ( audio == "off" ) {
 
 			// play
@@ -60,6 +60,7 @@
 			document.cookie="audioCookie=off";
 			controls.innerHTML = "<a href=\"javascript:radioOnOff();\">+</a>";
 		}	
+*/
         }
 
 
