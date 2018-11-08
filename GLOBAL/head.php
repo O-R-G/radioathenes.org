@@ -54,9 +54,10 @@
 	<link rel="stylesheet" type="text/css" media="all" href="GLOBAL/global.css" />
 	<script type="text/javascript" src="JS/global.js"></script>
 	<!-- <script type="text/javascript" src="JS/radioControl.js"></script> -->
+	<script type="text/javascript" src="JS/playPause.js"></script>
 </head>
 
-<body>
+<body onclick="playVideo();">
 
 	<!-- NAME -->
 
@@ -66,13 +67,14 @@
 
 
 	<!-- VIDEO -->
-        	
+
 	<div>
-		<video id="radio" width="480" height="360" poster="MEDIA/loading.gif" controls>
+		<video id="radio" width="480" height="360" poster="MEDIA/loading.gif">
 			<source src="MEDIA/MP4/radio.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 	</div>
+
 
 
 	<!-- CONTROLS -->
@@ -82,7 +84,8 @@
 	</div>
 
 
-
-
+    <div class="video-player" align="center">
+        <video src="MEDIA/MP4/radio.mp4" poster="poster.jpg" ></video>
+    </div>
 
 
