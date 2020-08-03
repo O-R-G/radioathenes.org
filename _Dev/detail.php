@@ -6,7 +6,7 @@ require_once("GLOBAL/head.php");
 
         <div>
 
-                <video id="radio" width="480" height="360" autoplay loop>
+                <video id="radio" width="480" height="360" autoplay loop playsinline>
                         <source src="MEDIA/MP4/out.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                 </video>

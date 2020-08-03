@@ -69,7 +69,7 @@
 	<!-- VIDEO -->
 
 	<div>
-		<video id="radio" width="480" height="360" poster="MEDIA/loading.gif">
+		<video id="radio" width="480" height="360" poster="MEDIA/loading.gif" controls playsinline>
 			<source src="MEDIA/MP4/radio.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
