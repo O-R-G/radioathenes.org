@@ -6,7 +6,8 @@
 	// video preload? 
 	var sRadio = document.getElementById('radio');
 	sRadio.addEventListener('loadeddata', function() {
-	   sRadio.setAttribute('controls');
+		console.log('laoded');
+	   sRadio.setAttribute('controls', 'controls');
 	}, false);
 	var debug = false;
               
