@@ -4,7 +4,10 @@
 	// radioVolumeUpDown
 	// add video position cookie to continuously stream the radio
 	// video preload? 
-	
+	var sRadio = document.getElementById('radio');
+	sRadio.addEventListener('loadeddata', function() {
+	   sRadio.setAttribute('controls');
+	}, false);
 	var debug = false;
               
 
