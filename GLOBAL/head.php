@@ -67,7 +67,6 @@
 
 
 	<!-- VIDEO -->
-
 	<div>
 		<video id="radio" width="480" height="360" poster="MEDIA/loading.gif" playsinline>
 			<source src="MEDIA/MP4/radio.mp4" type="video/mp4">
@@ -76,17 +75,15 @@
 	</div>
 
 
-
-
 	<!-- CONTROLS -->
 
 	<div id="controls" class="mtdbt2f4d-915 plain">
 		<a href="javascript:radioOnOff();">&times</a>
 	</div>
 
-
-    <div class="video-player" align="center">
-        <video src="MEDIA/MP4/radio.mp4" poster="poster.jpg" ></video>
-    </div>
-
+	<!-- ** redundant! **
+    	<div class="video-player" align="center">
+        	<video src="MEDIA/MP4/radio.mp4" poster="poster.jpg"></video>
+    	</div>
+	-->
 
