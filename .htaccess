@@ -1,0 +1,10 @@
+SetEnv PHPRC /home/radioa/public_html/php.ini
+
+RewriteEngine on
+
+
+# AddHandler Converted from Hive to CloudLinux at Tue Jul 10 07:05:53 2018
+<FilesMatch "\.(php|php3|php4|php5|phtml) >
+  SetHandler application/x-httpd-ea-php53
+</FilesMatch>
+
