@@ -1,0 +1,3 @@
+[submodule "responsive-html-email-template"]
+	path = responsive-html-email-template
+	url = git@github.com:leemunroe/responsive-html-email-template.git
