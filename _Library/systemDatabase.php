@@ -16,7 +16,7 @@ function systemDatabase() {
 	$dbConnect = MYSQL_CONNECT($dbMainHost, $dbMainUser, $dbMainPass);
 	MYSQL_SELECT_DB($dbMainDbse, $dbConnect);
 }
-systemDatabase();
+// systemDatabase();
 
 
 

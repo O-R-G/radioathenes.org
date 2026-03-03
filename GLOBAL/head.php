@@ -1,14 +1,14 @@
 <?php 
 	date_default_timezone_set("Europe/Athens");
-	require_once("_Library/systemDatabase.php"); 
+	// require_once("_Library/systemDatabase.php"); 
 	require_once("_Library/systemCookie.php");
 	require_once("_Library/displayNavigation.php"); 
 	require_once("_Library/displayMedia.php"); 
 
 	// Parse $id
 
-	$id = $_REQUEST['id'];		// no register globals	
-	if (!$id) $id = "2";
+	$id = $_REQUEST['id'] ?? "2";		// no register globals	
+	// if (!$id) $id = "2";
 	$ids = explode(",", $id);
 	$idFull = $id;
 	$id = $ids[count($ids) - 1];
@@ -26,7 +26,7 @@
 	
 	// Alt for dev options
 	
-	$alt = $_REQUEST['alt'];
+	$alt = $_REQUEST['alt'] ?? '';
 
 	$documentTitle = "Radio Athènes";
 
