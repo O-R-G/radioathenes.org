@@ -1,3 +1,6 @@
 [submodule "responsive-html-email-template"]
 	path = responsive-html-email-template
 	url = git@github.com:leemunroe/responsive-html-email-template.git
+[submodule "open-records-generator"]
+	path = open-records-generator
+	url = git@github.com:O-R-G/open-records-generator.git

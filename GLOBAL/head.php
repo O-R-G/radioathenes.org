@@ -1,18 +1,37 @@
 <?php 
 	date_default_timezone_set("Europe/Athens");
 	// require_once("_Library/systemDatabase.php"); 
+
+	require_once(__DIR__ . "/../open-records-generator/config/config.php");
+	require_once(__DIR__ . '/../config/views.php');
+	require_once(__DIR__ . '/../_Library/SiteMeta.php');
+	
 	require_once("_Library/systemCookie.php");
 	require_once("_Library/displayNavigation.php"); 
 	require_once("_Library/displayMedia.php"); 
 
-	// Parse $id
+	$db = db_connect("guest");
+	$oo = new Objects();
+	$uu = new URL();
 
-	$id = $_REQUEST['id'] ?? "2";		// no register globals	
-	// if (!$id) $id = "2";
-	$ids = explode(",", $id);
-	$idFull = $id;
-	$id = $ids[count($ids) - 1];
-	$pageName = basename($_SERVER['PHP_SELF'], ".php");
+	$item = null;
+	if($uu->id){
+		$item = $oo->get($uu->id);
+	}
+
+	$view = getView($uri);
+	
+	if($view === "404") {
+		http_response_code(404);
+	}
+	// if(is_array($page_config['stylesheets']))
+	// 	$page_config['stylesheets'][] = "main";
+	// else if(is_string($page_config['stylesheets']))
+	// 	$page_config['stylesheets'] = [$page_config['stylesheets'], 'main'];
+
+	$siteMeta = new SiteMeta($db, $view, $item);
+
+	
 	
 	// Live?
 	
@@ -47,10 +66,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-	<title><?php echo $documentTitle; ?></title>
-	<meta http-equiv="Content-Type" content="text/xhtml; charset=utf-8" />
-	<meta http-equiv="Title" content="<?php echo $documentTitle; ?>" />		
- 	<meta name="viewport" content="user-scalable=no, width=device-width">
+	<?php 
+		echo $siteMeta->generate(); 
+		// if($useGTM) echo $siteMeta->gtm_head;
+	?>
 	<link rel="stylesheet" type="text/css" media="all" href="GLOBAL/global.css" />
 	<script type="text/javascript" src="JS/global.js"></script>
 	<!-- <script type="text/javascript" src="JS/radioControl.js"></script> -->
@@ -62,7 +81,10 @@
 	<!-- NAME -->
 
 	<div id="name" class="mtdbt2f4d-915 plain">
-		<a href="<?php echo ($pageName == 'about') ? 'index' : 'about' ?>.php">RADIO ATHÈNES</a>
+		<?php 
+			$head_url = $view === 'home' ? '/about' : '/';
+		?>
+		<a href="<?php echo $head_url; ?>">RADIO ATHÈNES</a>
 	</div>
 
 
