@@ -25,7 +25,7 @@
 	$keywords = $siteMetaRow['deck'];
 	$description = $siteMetaRow['body'];
 
-	$siteMeta = new SiteMeta($db, $view, $item);
+	
 
 	// Live?
 	
@@ -43,7 +43,7 @@
 
 	$documentTitle = "Radio Athènes";
 	$pageTitle = $pageName !== 'index' ? $documentTitle . ' | ' . $pageName : $documentTitle ; 
-
+	$siteMeta = new SiteMeta($pageTitle, $keywords, $description);
 	/*
 	$staging = $_REQUEST['staging'];
 	$sql    = "SELECT deck FROM objects WHERE objects.name1 LIKE 'Live';";
