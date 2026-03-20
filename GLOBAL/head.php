@@ -61,10 +61,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-	<title><?php echo $documentTitle; ?></title>
-	<meta http-equiv="Content-Type" content="text/xhtml; charset=utf-8" />
-	<meta http-equiv="Title" content="<?php echo $documentTitle; ?>" />		
- 	<meta name="viewport" content="user-scalable=no, width=device-width">
+	<?php echo $siteMeta->generate(); ?>
 	<link rel="stylesheet" type="text/css" media="all" href="GLOBAL/global.css" />
 	<script type="text/javascript" src="JS/global.js"></script>
 	<!-- <script type="text/javascript" src="JS/radioControl.js"></script> -->
