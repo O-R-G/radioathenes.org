@@ -4,6 +4,7 @@
 	require_once("_Library/systemCookie.php");
 	require_once("_Library/displayNavigation.php"); 
 	require_once("_Library/displayMedia.php"); 
+	require_once("_Library/SiteMeta.php"); 
 
 	// Parse $id
 
@@ -14,6 +15,18 @@
 	$id = $ids[count($ids) - 1];
 	$pageName = basename($_SERVER['PHP_SELF'], ".php");
 	
+	$siteMetaId = 111;
+
+	$sql = "SELECT objects.deck, objects.body FROM objects WHERE id = $siteMetaId;";
+
+	$result = MYSQL_QUERY($sql);
+	$siteMetaRow = MYSQL_FETCH_ARRAY($result); 
+
+	$keywords = $siteMetaRow['deck'];
+	$description = $siteMetaRow['body'];
+
+	$siteMeta = new SiteMeta($db, $view, $item);
+
 	// Live?
 	
 	// $live is stored in database and turns on site
@@ -29,6 +42,7 @@
 	$alt = $_REQUEST['alt'];
 
 	$documentTitle = "Radio Athènes";
+	$pageTitle = $pageName !== 'index' ? $documentTitle . ' | ' . $pageName : $documentTitle ; 
 
 	/*
 	$staging = $_REQUEST['staging'];
