@@ -127,7 +127,7 @@ if ($action != "add") {
 
 	//  Add object to database
 
-	$sql = "INSERT INTO objects (created, modified, name1, url, notes, deck, body, begin, end, rank) VALUES('". date("Y-m-d H:i:s") ."', '". date("Y-m-d H:i:s") ."', '$name1', '$url', '$notes', '$deck', '$body', ";
+	$sql = "INSERT INTO objects (created, modified, name1, url, notes, deck, body, begin, end, `rank`) VALUES('". date("Y-m-d H:i:s") ."', '". date("Y-m-d H:i:s") ."', '$name1', '$url', '$notes', '$deck', '$body', ";
 	$sql .= ($begin)  ? "'$begin', " : "null, ";
 	$sql .= ($end)  ? "'$end', " : "null, ";
 	$sql .= ($rank) ? "'$rank')" : "null)";

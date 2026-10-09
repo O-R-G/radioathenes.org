@@ -65,7 +65,7 @@ if ($action != "update") {
 
 		$objectID = $myrow["id"];
 		$i = 1;
-		$sql = "SELECT * FROM media WHERE object = '". $objectID ."' AND active = '1' ORDER BY rank, modified, created, id";
+		$sql = "SELECT * FROM media WHERE object = '". $objectID ."' AND active = '1' ORDER BY `rank`, modified, created, id";
 		$result = MYSQL_QUERY($sql);
 		$num_rows = MYSQL_NUM_ROWS($result);
 
@@ -174,7 +174,7 @@ if ($action != "update") {
 	if ($myrow["url"] 	!= $url) 	$z .= "url='$url', ";
 	if ($myrow["begin"] 	!= $begin) 	$z .= ($begin) ? "begin ='$begin', " : "begin = null, ";
 	if ($myrow["end"] 	!= $end) 	$z .= ($end) ? "end ='$end', " : "end = null, ";
-	if ($myrow["rank"] 	!= $rank) 	$z .= ($rank) ? "rank ='$rank', " : "rank = null, ";
+	if ($myrow["rank"] 	!= $rank) 	$z .= ($rank) ? "`rank` ='$rank', " : "`rank` = null, ";
 
 
 	//  Update edited fields only
@@ -353,7 +353,7 @@ if ($action != "update") {
 		$z2 = NULL;
 		
 		if ($myrow["caption"] != $mediaCaption[$i]) 	$z2 .= "caption='". $mediaCaption[$i] ."', ";
-		if ($myrow["rank"] != $mediaRank[$i]) 	        $z2 .= "rank='". $mediaRank[$i] ."', ";
+		if ($myrow["rank"] != $mediaRank[$i]) 	        $z2 .= "`rank`='". $mediaRank[$i] ."', ";
 		
 		//if ($myrow["weight"] != $weight[$i]) 		$z2 .= "weight='". $weight[$i] ."', ";
 
